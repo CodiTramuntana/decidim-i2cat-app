@@ -1,7 +1,7 @@
 @import "decidim/application";
 
 .main-footer .footer-nav{
-  a[href="/open-data/download"] { 
+  a[href^="/open-data/download"] { 
     display: none; 
   }  
 }
