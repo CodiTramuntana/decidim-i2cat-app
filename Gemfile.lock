@@ -59,6 +59,11 @@ GIT
     decidim-comments (0.19.0)
       decidim-core (= 0.19.0)
       jquery-rails (~> 4.3)
+    decidim-conferences (0.19.0)
+      decidim-core (= 0.19.0)
+      decidim-meetings (= 0.19.0)
+      wicked_pdf (~> 1.4)
+      wkhtmltopdf-binary (~> 0.12)
     decidim-core (0.19.0)
       active_link_to (~> 1.0)
       anchored (>= 1.1.0)
@@ -754,8 +759,11 @@ GEM
     websocket-extensions (0.1.4)
     whenever (1.0.0)
       chronic (>= 0.6.3)
+    wicked_pdf (1.4.0)
+      activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
+    wkhtmltopdf-binary (0.12.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -768,6 +776,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim!
+  decidim-conferences
   decidim-dev!
   decidim-term_customizer!
   delayed_job_active_record
