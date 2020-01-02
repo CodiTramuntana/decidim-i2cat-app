@@ -17,7 +17,7 @@ gem 'openssl'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/mainio/decidim-module-term_customizer.git'
-gem 'decidim-conferences'
+gem 'decidim-conferences', DECIDIM_VERSION
 
 group :development, :test do
   gem 'better_errors'
