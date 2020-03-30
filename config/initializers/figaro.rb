@@ -8,4 +8,4 @@ unless env.development? || env.test?
   keys += %w[GEOCODER_LOOKUP_APP_ID GEOCODER_LOOKUP_APP_CODE]
   # keys += %w[CENSUS_URL CENSUS_SECRET CENSUS_INTEREST]
 end
-# 	
+Figaro.require_keys(keys)
