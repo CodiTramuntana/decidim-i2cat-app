@@ -14,8 +14,7 @@
 //= require_tree .
 //= require decidim
 
-//de cada anchor tag, si contiene challenge.cat remove target: blank
-
+//remove target=_blank from each anchor tag with internal href
 $(document).ready(function() {
 	$('a').each(function(){
 	  const link = this;
