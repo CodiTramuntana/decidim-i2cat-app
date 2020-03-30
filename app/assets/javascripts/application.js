@@ -13,3 +13,14 @@
 //= require rails-ujs
 //= require_tree .
 //= require decidim
+
+//de cada anchor tag, si contiene challenge.cat remove target: blank
+
+$(document).ready(function() {
+	$('a').each(function(){
+	  const link = this;
+	  if (link.href.includes("https://participa.challenge.cat")) {
+	    $(this).removeAttr("target");
+	  }
+	});
+});

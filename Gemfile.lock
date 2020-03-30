@@ -776,7 +776,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim!
-  decidim-conferences
+  decidim-conferences!
   decidim-dev!
   decidim-term_customizer!
   delayed_job_active_record
