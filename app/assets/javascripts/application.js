@@ -18,7 +18,7 @@
 $(document).ready(function() {
 	$('a').each(function(){
 	  const link = this;
-	  if (link.href.includes("https://participa.challenge.cat")) {
+	  if (link.href.includes("participa.challenge.cat")) {
 	    $(this).removeAttr("target");
 	  }
 	});
