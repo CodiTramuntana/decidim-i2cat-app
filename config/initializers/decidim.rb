@@ -20,3 +20,26 @@ end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+Rails.application.config.to_prepare do
+  Decidim::MenuRegistry.find(:menu).configurations.clear
+  Decidim.menu :menu do |menu|
+    menu.item I18n.t("menu.home", scope: "decidim"),
+                    decidim.root_path,
+                    position: 1,
+                    active: :exclusive
+
+    menu.item I18n.t("menu.processes", scope: "decidim"),
+              # decidim_participatory_processes.participatory_processes_path,
+              '/processes/solucions-hackovid/f/86/',
+              position: 2,
+              if: Decidim::ParticipatoryProcess.where(organization: current_organization).published.any?,
+              active: %r{^\/process(es|_groups)}
+
+    menu.item I18n.t("menu.help", scope: "decidim"),
+              # decidim.pages_path,
+              '/pages/faq',
+              position: 7,
+              active: :inclusive
+  end
+end
