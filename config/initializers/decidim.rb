@@ -42,4 +42,9 @@ Rails.application.config.to_prepare do
               position: 7,
               active: :inclusive
   end
+
+  # make decorators available
+  # Dir.glob(Rails.application.root + 'app/decorators/**/*_decorator.rb').each do |c|
+  #   require_dependency(c)
+  # end
 end
