@@ -1,0 +1,13 @@
+ca:
+  decidim:
+    proposals:
+      models:
+        proposal:
+          fields:
+            endorsements: Adhesiones
+      proposal_endorsements_helper:
+        render_endorsements_button_card_part:
+          endorse: Adherirse
+      proposals:
+        endorsements_card_row:
+          comments: Comentarios
