@@ -1,0 +1,48 @@
+<section class="extended home-section">
+  <div class="wrapper-home">
+    <div class="row column text-center">
+      <h3 class="heading2"><%= t("decidim.pages.home.extended.how_to_participate_to_hackovid") %></h3>
+    </div>
+    <div class="row small-up-1 medium-up-3 home-bullets">
+      <div class="column">
+        <div class="home-bullet">
+          <div class="home-bullet__icon">
+            <%= image_tag "si_ets_ciutadana_o_ciutada.png" %>
+          </div>
+          <div class="home-bullet__desc">
+            <h4 class="heading6"><%= t("decidim.pages.home.extended.citizen") %></h4>
+            <p><%= t("decidim.pages.home.extended.citizen_explanation") %></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="home-bullet">
+          <div class="home-bullet__icon">
+            <%= image_tag "si_ets_desenvolupadora_tic.png" %>
+          </div>
+          <div class="home-bullet__desc">
+            <h4 class="heading6"><%= t("decidim.pages.home.extended.developer") %></h4>
+            <p><%= t("decidim.pages.home.extended.developer_explanation") %></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="home-bullet">
+          <div class="home-bullet__icon">
+            <%= image_tag "siguis_qui_siguis.png" %>
+          </div>
+          <div class="home-bullet__desc">
+            <h4 class="heading6"><%= t("decidim.pages.home.extended.anyone") %></h4>
+            <p><%= t("decidim.pages.home.extended.anyone_explanation") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns small-centered small-10
+                smallmedium-8 medium-6 large-4">
+        <%= link_to t("decidim.pages.home.extended.more_info"), decidim.page_path("faq"), class: "button expanded hollow button--sc" %>
+      </div>
+    </div>
+  </div>
+</section>
