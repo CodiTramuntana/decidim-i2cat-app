@@ -13,4 +13,6 @@ Check the `Rails.application.config.to_prepare` block in `config/initializers/de
 There are some overrides that must be checked on every upgrade:
 
 - app/views/decidim/proposals/proposals/\_filters.html.erb hides some filters
-- app/views/decidim/proposals/proposals/show.html.erb:73 simply hides the follow button
+- app/views/decidim/proposals/proposals/show.html.erb:73
+  - hides the follow button
+  - hides the versioning of the proposal
