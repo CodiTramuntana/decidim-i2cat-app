@@ -1,0 +1,11 @@
+<!-- insert_after '#card__newsletter' -->
+<div class="card">
+  <div class="card__content" style="text-align: center">
+    <div style="display: inline-block;">
+      <div><%= flash[:recaptcha_error] %></div>
+      <div class="field">
+        <%= recaptcha_tags %>
+      </div>
+    </fieldset>
+  </div>
+</div>

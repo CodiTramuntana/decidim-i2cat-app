@@ -21,6 +21,11 @@ gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
 gem 'decidim-conferences', DECIDIM_VERSION
 
+gem 'recaptcha', require: 'recaptcha/rails'
+
+# use deface to decorate Decidim views unobtrusively
+gem 'deface'
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
