@@ -1,0 +1,13 @@
+es:
+  decidim:
+    pages:
+      home:
+        extended:
+          anyone: "ESTÉS DONDE ESTÉS"
+          anyone_explanation: "Descarga y comparte las soluciones que salgan de la hackatón con todas las personas que las puedan necessitar"
+          citizen: "SI ERES UNA CIUDADANA O CIUDADANO"
+          citizen_explanation: "Vota las necesidades más urgentes que tienes durante el confinamiento y propón de nuevas"
+          developer: "SI ERES DESARROLLADOR/A TIC"
+          developer_explanation: "une-te a la Hackovid y aporta soluciones a las necesidades de la ciudadanía durante el confinamiento."
+          how_to_participate_to_hackovid: "Participa a la Hackovid!"
+          
