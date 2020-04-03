@@ -1,0 +1,13 @@
+ca:
+  decidim:
+    pages:
+      home:
+        extended:
+          anyone: "SIGUIS QUI SIGUIS"
+          anyone_explanation: "Descarrega i comparteix les solucions que surtin de la hackató amb totes aquelles persones qui les puguin necessitar"
+          citizen: "SI ETS UNA CIUTADANA O CIUTADÀ"
+          citizen_explanation: "Vota les necessitats més urgents que tens durant el confinament i proposa'n de noves"
+          developer: "SI ETS DESENVOLUPADOR/A TIC"
+          developer_explanation: "uneix-te a la Hackovid i aporta solucions a les necessitats de la ciutadania durant el confinament."
+          how_to_participate_to_hackovid: "Participa a la Hackovid!"
+          
