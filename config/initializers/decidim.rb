@@ -44,7 +44,7 @@ Rails.application.config.to_prepare do
   end
 
   # make decorators available
-  # Dir.glob(Rails.application.root + 'app/decorators/**/*_decorator.rb').each do |c|
-  #   require_dependency(c)
-  # end
+  Dir.glob(Rails.application.root + 'app/decorators/**/*_decorator.rb').each do |c|
+    require_dependency(c)
+  end
 end
