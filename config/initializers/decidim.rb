@@ -29,18 +29,18 @@ Rails.application.config.to_prepare do
                     position: 1,
                     active: :exclusive
 
-    menu.item I18n.t("menu.processes", scope: "decidim"),
-              # decidim_participatory_processes.participatory_processes_path,
-              '/processes/solucions-hackovid/f/86/',
-              position: 2,
-              if: Decidim::ParticipatoryProcess.where(organization: current_organization).published.any?,
-              active: %r{^\/process(es|_groups)}
-
     menu.item I18n.t("menu.help", scope: "decidim"),
               # decidim.pages_path,
               '/pages/faq',
-              position: 7,
+              position: 2,
               active: :inclusive
+
+    menu.item I18n.t("menu.processes", scope: "decidim"),
+              # decidim_participatory_processes.participatory_processes_path,
+              '/processes/solucions-hackovid/f/86/',
+              position: 3,
+              if: Decidim::ParticipatoryProcess.where(organization: current_organization).published.any?,
+              active: %r{^\/process(es|_groups)}
   end
 
   # make decorators available
