@@ -50,8 +50,7 @@ module Decidim
         event: "decidim.events.follows.created",
         event_class: Decidim::Admin::UserFollowEvent,
         resource: Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization),
-        affected_users: Decidim::User.where(admin: true, organization: current_organization),
-        followers: Decidim::User.where(admin: true, organization: current_organization)
+        affected_users: Decidim::User.where(admin: true, organization: current_organization)
       )
     end
   end
