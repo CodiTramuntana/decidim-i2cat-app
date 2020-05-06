@@ -1,5 +1,9 @@
 ca:
   decidim:
+    events:
+      follows:
+        created:
+          notification_title: L'usuaria está seguint a <a href="%{resource_path}">%{resource_title}</a>.
     proposals:
       models:
         proposal:
@@ -11,3 +15,6 @@ ca:
       proposals:
         endorsements_card_row:
           comments: Comentaris
+  models:
+    assembly:
+      followers: Seguidors

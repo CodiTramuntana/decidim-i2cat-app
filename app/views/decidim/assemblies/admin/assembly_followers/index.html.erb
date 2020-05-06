@@ -1,0 +1,45 @@
+<div class='card' id="assembly_admins">
+  <div class="card-divider">
+    <h2 class="card-title">
+      <%= t("models.assembly.followers") %>
+    </h2>
+  </div>
+
+  <div class="card-section">
+    <div class="table-scroll">
+      <table class="stack">
+        <thead>
+          <tr>
+            <th><%= t("models.assembly_user_role.fields.name", scope: "decidim.admin") %></th>
+            <th><%= t("models.assembly_user_role.fields.email", scope: "decidim.admin") %></th>
+            <th><%= t("models.user.fields.invitation_sent_at", scope: "decidim.admin") %></th>
+            <th><%= t("models.user.fields.invitation_accepted_at", scope: "decidim.admin") %></th>
+            <th class="actions"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @followers.each do |follower| %>
+            <tr>
+              <td>
+                <%= follower.name %><br>
+              </td>
+              <td>
+                <%= follower.email %><br>
+              </td>
+              <td>
+                <% if follower.invitation_sent_at %>
+                  <%= l follower.invitation_sent_at, format: :short %>
+                <% end %>
+              </td>
+              <td>
+                <% if follower.invitation_accepted_at %>
+                  <%= l follower.invitation_accepted_at, format: :short %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

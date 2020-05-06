@@ -1,0 +1,9 @@
+en:
+  decidim:
+    events:
+      follows:
+        created:
+          notification_title: The user is now following <a href="%{resource_path}">%{resource_title}</a>.
+  models:
+    assembly:
+      followers: Followers

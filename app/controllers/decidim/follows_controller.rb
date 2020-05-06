@@ -30,13 +30,13 @@ module Decidim
       CreateFollow.call(@form, current_user) do
         on(:ok) do
           render :update_button
+          send_notification
         end
 
         on(:invalid) do
           render json: { error: I18n.t("follows.create.error", scope: "decidim") }, status: :unprocessable_entity
         end
       end
-      send_notification
     end
 
     def resource
@@ -47,11 +47,12 @@ module Decidim
 
     def send_notification
       Decidim::EventsManager.publish(
-        event: "decidim.events.follows.post.created",
+        event: "decidim.events.follows.created",
         event_class: Decidim::Admin::UserFollowEvent,
-        resource: @post,
-        followers: @post.participatory_space.followers
-        )
+        resource: Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization),
+        affected_users: Decidim::User.where(admin: true, organization: current_organization),
+        followers: Decidim::User.where(admin: true, organization: current_organization)
+      )
     end
   end
 end
