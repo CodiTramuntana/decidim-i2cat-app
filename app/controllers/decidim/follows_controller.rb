@@ -46,12 +46,24 @@ module Decidim
     end
 
     def send_notification
+      return if params[:slug].nil? || assembly.nil?
+
       Decidim::EventsManager.publish(
         event: "decidim.events.follows.created",
         event_class: Decidim::Admin::UserFollowEvent,
-        resource: Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization),
-        affected_users: Decidim::User.where(admin: true, organization: current_organization)
+        resource: assembly,
+        affected_users: admin_users
       )
+    end
+
+    private
+
+    def assembly
+      Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization)
+    end
+
+    def admin_users
+      Decidim::User.where(admin: true, organization: current_organization)
     end
   end
 end
