@@ -29,8 +29,8 @@ module Decidim
 
       CreateFollow.call(@form, current_user) do
         on(:ok) do
-          render :update_button
           send_notification
+          render :update_button
         end
 
         on(:invalid) do
