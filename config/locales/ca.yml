@@ -3,7 +3,7 @@ ca:
     events:
       follows:
         created:
-          notification_title: L'usuaria está seguint a <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: La usuaria "%{resource_user_name}" está seguint a <a href="%{resource_path}">%{resource_title}</a>.
     proposals:
       models:
         proposal:

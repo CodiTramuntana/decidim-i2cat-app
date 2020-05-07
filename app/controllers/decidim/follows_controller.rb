@@ -52,7 +52,8 @@ module Decidim
         event: "decidim.events.follows.created",
         event_class: Decidim::Admin::UserFollowEvent,
         resource: assembly,
-        affected_users: admin_users
+        affected_users: admin_users,
+        extra: { user: current_user }
       )
     end
 
