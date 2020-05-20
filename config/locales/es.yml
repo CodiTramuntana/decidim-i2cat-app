@@ -1,5 +1,9 @@
 ca:
   decidim:
+    events:
+      follows:
+        created:
+          notification_title: La usuaria "%{resource_user_name}" está siguiendo a <a href="%{resource_path}">%{resource_title}</a>.
     proposals:
       models:
         proposal:
@@ -11,3 +15,6 @@ ca:
       proposals:
         endorsements_card_row:
           comments: Comentarios
+  models:
+    assembly:
+      followers: Seguidores
