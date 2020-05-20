@@ -11,7 +11,7 @@ module Decidim
 
         def index
           @followers = Decidim::Assembly.find_by(
-            slug: permitted_params[:assembly_slug],
+            slug: params[:assembly_slug],
             organization: current_organization
           ).followers
         end
