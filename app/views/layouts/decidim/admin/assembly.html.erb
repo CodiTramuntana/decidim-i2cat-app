@@ -68,7 +68,7 @@
           <%= aria_selected_link_to t("moderations", scope: "decidim.admin.menu.assemblies_submenu"), decidim_admin_assemblies.moderations_path(current_participatory_space) %>
         </li>
       <% end %>
-      <li  <% if is_active_link?(Rails.application.routes.url_helpers.assembly_followers_path(current_participatory_space)) %> class = "is-active" <% end %>>
+      <li <% if is_active_link?(Rails.application.routes.url_helpers.assembly_followers_path(current_participatory_space)) %> class="is-active" <% end %>>
         <%= link_to "Followers", Rails.application.routes.url_helpers.assembly_followers_path(current_participatory_space) %>
       </li>
     </ul>
