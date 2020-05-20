@@ -60,7 +60,7 @@ module Decidim
     private
 
     def assembly
-      Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization)
+      @assembly ||= Decidim::Assembly.find_by(slug: params[:slug], organization: current_organization)
     end
 
     def admin_users
