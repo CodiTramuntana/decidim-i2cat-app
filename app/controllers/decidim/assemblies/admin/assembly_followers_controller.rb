@@ -15,12 +15,6 @@ module Decidim
             organization: current_organization
           ).followers
         end
-
-        private
-
-        def permitted_params
-          params.permit(:assembly_slug)
-        end
       end
     end
   end
