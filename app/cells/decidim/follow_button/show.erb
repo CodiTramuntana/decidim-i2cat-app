@@ -11,7 +11,7 @@
         </span>
       <% end %>
     <% else %>
-      <%= button_to decidim.follow_path, class: button_classes, params: { follow: { followable_gid: model.to_sgid.to_s, inline: inline? } }, data: { disable: true }, remote: true do %>
+      <%= button_to decidim.follow_path(slug: (params[:slug] || params[:assembly_slug])), class: button_classes, params: { follow: { followable_gid: model.to_sgid.to_s, inline: inline? } }, data: { disable: true }, remote: true do %>
         <span class="icon-wrap">
           <%= icon "bell", icon_options %>
           <%= model.followers.count %>
