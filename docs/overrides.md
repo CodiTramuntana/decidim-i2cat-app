@@ -10,3 +10,7 @@ The best way to spot these problems is by reviewing the changes in the files tha
 	- `app/cells/decidim/follow_button/show.erb`
 	- `app/controllers/decidim/follows_controller.rb`
 	- `app/views/layouts/decidim/admin/assembly.html.erb`
+
+- Hide "àmbits", "àreas" and "mostrar" filters. (https://github.com/CodiTramuntana/decidim-i2cat-app/pull/35)
+  - `app/views/decidim/assemblies/_filter_by_type.html.erb`
+  - `app/views/decidim/shared/participatory_space_filters/_filters.html.erb`
