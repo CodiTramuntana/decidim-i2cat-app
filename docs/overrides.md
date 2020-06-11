@@ -10,3 +10,6 @@ The best way to spot these problems is by reviewing the changes in the files tha
 	- `app/cells/decidim/follow_button/show.erb`
 	- `app/controllers/decidim/follows_controller.rb`
 	- `app/views/layouts/decidim/admin/assembly.html.erb`
+
+- Redirect index Pages to "smartcataloniachallenge" help Page. (https://github.com/CodiTramuntana/decidim-i2cat-app/pull/33)
+  - `app/controllers/decidim/pages_controller.rb`
