@@ -15,7 +15,7 @@ module Decidim
       enforce_permission_to :read, :public_page
       @topics = StaticPageTopic.where(organization: current_organization)
       @orphan_pages = StaticPage.where(topic: nil, organization: current_organization)
-      @page = StaticPage.find_by(slug: "smartcataloniachallenge")
+      @page = StaticPage.find_by(slug: "smartcataloniachallenge") if current_organization.host == "participa.challenge.cat"
       redirect_to page_path(@page || StaticPage.take)
     end
 
