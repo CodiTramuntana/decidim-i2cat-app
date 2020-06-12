@@ -13,3 +13,16 @@
 //= require rails-ujs
 //= require_tree .
 //= require decidim
+
+/**
+ * This removes the attribute `target` from each anchor tag
+ * when the URL redirects to an internal page.
+ */
+$(document).ready(function() {
+  $('a').each(function(){
+    const link = this;
+    if (link.href.includes('participa.challenge.cat')) {
+      $(this).removeAttr('target');
+    }
+  });
+});
