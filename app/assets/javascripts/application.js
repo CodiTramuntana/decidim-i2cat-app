@@ -14,7 +14,10 @@
 //= require_tree .
 //= require decidim
 
-//remove target=_blank from each anchor tag with internal href
+/**
+ * This removes the attribute `target` from each anchor tag
+ * when the URL redirects to an external page.
+ */
 $(document).ready(function() {
   $('a').each(function(){
     const link = this;
