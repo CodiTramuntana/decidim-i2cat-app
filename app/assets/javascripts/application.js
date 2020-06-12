@@ -16,7 +16,7 @@
 
 /**
  * This removes the attribute `target` from each anchor tag
- * when the URL redirects to an external page.
+ * when the URL redirects to an internal page.
  */
 $(document).ready(function() {
   $('a').each(function(){
