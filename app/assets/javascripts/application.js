@@ -16,10 +16,10 @@
 
 //remove target=_blank from each anchor tag with internal href
 $(document).ready(function() {
-	$('a').each(function(){
-	  const link = this;
-	  if (link.href.includes("participa.challenge.cat")) {
-	    $(this).removeAttr("target");
-	  }
-	});
+  $('a').each(function(){
+    const link = this;
+    if (link.href.includes('participa.challenge.cat')) {
+      $(this).removeAttr('target');
+    }
+  });
 });
