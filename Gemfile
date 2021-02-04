@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.22-stable' }
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.23-stable' }
 
 gem 'daemons'
 gem 'delayed_job_active_record'
@@ -14,8 +14,6 @@ gem 'whenever'
 
 gem 'figaro', '>= 1.1.1'
 gem 'openssl'
-
-gem 'geocoder', '~> 1.5.2'
 
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
