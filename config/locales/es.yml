@@ -4,6 +4,10 @@ ca:
       follows:
         created:
           notification_title: La usuaria "%{resource_user_name}" está siguiendo a <a href="%{resource_path}">%{resource_title}</a>.
+    pages:
+      home:
+        feder:
+          description: Este proyecto ha sido cofinanciado por el Fondo Europeo de Desarrollo Regional de la Unión Europea en el marco del Programa Operativo FEDER de Catalunya 2014-2020
     proposals:
       models:
         proposal:

@@ -4,6 +4,10 @@ en:
       follows:
         created:
           notification_title: The user "%{resource_user_name}" is now following <a href="%{resource_path}">%{resource_title}</a>.
+    pages:
+      home:
+        feder:
+          description: This project has been co-financed by the European Regional Development Fund of the European Union in the framework of the ERDF Operational Program of Catalonia 2014-2020
   models:
     assembly:
       followers: Followers
