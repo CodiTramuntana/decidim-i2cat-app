@@ -7,7 +7,7 @@ en:
     pages:
       home:
         feder:
-          description: This project has been co-financed by the European Regional Development Fund of the European Union in the framework of the ERDF Operational Program of Catalonia 2014-2020
+          description: This project is 50% financed by the European Regional Development Fund in the framework of the ERDF 2014-2020 Operational Program for Catalonia under the operation code GO10-010783.
   models:
     assembly:
       followers: Followers
