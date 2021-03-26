@@ -27,7 +27,3 @@ Deface::Override.new(virtual_path: +'layouts/decidim/_main_footer',
                      name: 'feder_footer',
                      insert_after: 'div.main-footer',
                      text: feder_text)
-
-Deface::Override.new(virtual_path: +'layouts/decidim/_main_footer',
-                     name: 'remove_main_footer',
-                     remove: 'div.main-footer')
