@@ -1,4 +1,4 @@
-ca:
+es:
   decidim:
     events:
       follows:
@@ -7,7 +7,7 @@ ca:
     pages:
       home:
         feder:
-          description: Aquest projecte està cofinançat en un 50% pel Fons Europeu de Desenvolupament Regional de la Unió Europea en el marc del Programa Operatiu FEDER de Catalunya 2014-2020 amb codi d'operació GO10-010783.
+          description: Este proyecto está cofinanciado en un 50% por el Fondo Europeo de Desarrollo Regional de la Unión Europea en el marco del Programa Operativo FEDER de Cataluña 2014-2020 con código de operación GO10-010783.
     proposals:
       models:
         proposal:
