@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2021_07_01_072447) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -1642,6 +1644,41 @@
     t.index ["uid"], name: "index_oauth_applications_on_uid", unique: true
   end
 
+  create_table "sd_goals", force: :cascade do |t|
+    t.jsonb "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "solutions", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.text "youtube_link", null: false
+    t.string "github_link", null: false
+    t.string "web_url"
+    t.string "android_mkt_url"
+    t.string "ios_mkt_url"
+    t.bigint "sd_goal_id"
+    t.string "team_name", null: false
+    t.bigint "decidim_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "explanation"
+    t.string "file_file_name"
+    t.string "file_content_type"
+    t.integer "file_file_size"
+    t.datetime "file_updated_at"
+    t.boolean "firebase_shared", default: false, null: false
+    t.string "firebase_url"
+    t.string "representative_email", null: false
+    t.string "representative_first_name", null: false
+    t.string "representative_last_name", null: false
+    t.string "representative_phone_num"
+    t.index ["decidim_user_id"], name: "index_solutions_on_decidim_user_id"
+    t.index ["sd_goal_id"], name: "index_solutions_on_sd_goal_id"
+    t.index ["title"], name: "index_solutions_on_title"
+  end
+
   create_table "versions", force: :cascade do |t|
     t.string "item_type", null: false
     t.integer "item_id", null: false
@@ -1679,7 +1716,6 @@
   add_foreign_key "decidim_term_customizer_constraints", "decidim_organizations"
   add_foreign_key "decidim_term_customizer_constraints", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_term_customizer_translations", "decidim_term_customizer_translation_sets", column: "translation_set_id"
-  add_foreign_key "decidim_users", "decidim_organizations"
   add_foreign_key "decidim_user_blocks", "decidim_users"
   add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_moderations", "decidim_users"
