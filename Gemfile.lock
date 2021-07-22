@@ -219,6 +219,13 @@ GIT
     decidim-verifications (0.24.3)
       decidim-core (= 0.24.3)
 
+GIT
+  remote: https://github.com/gencat/decidim-challenges.git
+  revision: 15cc685a013f5434e513422ec4a986ad99f6d2e5
+  specs:
+    decidim-challenges (0.0.5)
+      decidim-core (~> 0.24.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -874,6 +881,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim!
+  decidim-challenges (= 0.0.5)!
   decidim-conferences!
   decidim-dev!
   decidim-term_customizer!
