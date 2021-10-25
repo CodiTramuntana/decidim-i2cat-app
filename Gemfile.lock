@@ -221,9 +221,9 @@ GIT
 
 GIT
   remote: https://github.com/gencat/decidim-challenges.git
-  revision: 875050c250cf62550e7aa640f400b3784f25a550
+  revision: 49a3e139299063e786e814606d461109702ab175
   specs:
-    decidim-challenges (0.0.8)
+    decidim-challenges (0.0.9)
       decidim-core (~> 0.24.2)
 
 GEM
@@ -883,7 +883,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim!
-  decidim-challenges (~> 0.0.8)!
+  decidim-challenges (~> 0.0.9)!
   decidim-conferences!
   decidim-dev!
   decidim-term_customizer!
