@@ -19,7 +19,7 @@ gem 'openssl'
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
 gem 'decidim-conferences', DECIDIM_VERSION
-gem 'decidim-challenges', '~> 0.0.9', git: 'https://github.com/gencat/decidim-challenges.git'
+gem 'decidim-challenges', '~> 0.0.9', git: 'https://github.com/gencat/decidim-module-challenges.git'
 
 group :development, :test do
   gem 'better_errors'
