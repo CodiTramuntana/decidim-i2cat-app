@@ -221,9 +221,10 @@ GIT
 
 GIT
   remote: https://github.com/gencat/decidim-module-challenges.git
-  revision: 6ae030536a9755159af03a1596489b177129041a
+  revision: 65146ac9ad5a7d01545e73ec0fce826cf1bc8447
+  branch: layout/hide_titles_when_content_is_empty
   specs:
-    decidim-challenges (0.0.9)
+    decidim-challenges (0.0.10)
       decidim-core (~> 0.24.2)
 
 GEM
@@ -883,7 +884,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim!
-  decidim-challenges (~> 0.0.9)!
+  decidim-challenges (~> 0.0.10)!
   decidim-conferences!
   decidim-dev!
   decidim-term_customizer!
