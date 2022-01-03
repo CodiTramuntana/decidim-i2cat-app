@@ -19,7 +19,7 @@ gem 'openssl'
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
 gem 'decidim-conferences', DECIDIM_VERSION
-gem 'decidim-challenges', '~> 0.0.10', git: 'https://github.com/gencat/decidim-module-challenges.git', branch: "layout/hide_titles_when_content_is_empty"
+gem 'decidim-challenges', '~> 0.0.10', git: 'https://github.com/gencat/decidim-module-challenges.git'
 
 group :development, :test do
   gem 'better_errors'
