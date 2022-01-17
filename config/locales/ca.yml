@@ -1,5 +1,9 @@
 ca:
   decidim:
+    challenges:
+      challenges:
+        orders:
+          alphabetically: Alfabèticament
     events:
       follows:
         created:

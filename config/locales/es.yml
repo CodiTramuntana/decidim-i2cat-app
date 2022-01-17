@@ -1,5 +1,9 @@
 es:
   decidim:
+    challenges:
+      challenges:
+        orders:
+          alphabetically: Alfabéticamente
     events:
       follows:
         created:
