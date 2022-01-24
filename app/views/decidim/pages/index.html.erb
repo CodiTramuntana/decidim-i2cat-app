@@ -1,0 +1,5 @@
+<% if current_organization.host == "reptes.dca.cat" %>%
+  <%= render partial: "who_we_are" %>
+<% else %>
+  <%= render partial: "original_index" %>
+<% end %>
