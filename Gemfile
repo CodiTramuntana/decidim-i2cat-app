@@ -25,7 +25,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug', platform: :mri
-  gem 'faker'
+  gem 'faker', '~> 2.14.0'
   gem 'decidim-dev', DECIDIM_VERSION
 end
 
