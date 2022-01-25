@@ -4,11 +4,10 @@ This is a Decidim I2CAT app.
 
 ## Testing
 
-Create a dummy app in your application:
+Prepare the database:
 
-```
-rake decidim:generate_external_test_app
-cd spec/decidim_dummy_app/
+```bash
+RAILS_ENV=test bin/rake db:create db:migrate
 bundle exec rails decidim_conferences:install:migrations
 bundle exec rails decidim_challenges:install:migrations
 RAILS_ENV=test bundle exec rails db:migrate
