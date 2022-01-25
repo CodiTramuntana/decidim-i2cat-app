@@ -6,7 +6,7 @@ describe "Visit assemblies", type: :system do
   let(:organization) { create :organization }
   let!(:assembly) { create(:assembly, organization: organization) }
   
-  context "when host is not participa.challenge.cat" do
+  context "when visiting the assemblies participatory space" do
     before do
       switch_to_host(organization.host)
       visit decidim_assemblies.assemblies_path
