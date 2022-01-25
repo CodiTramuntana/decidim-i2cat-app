@@ -16,6 +16,8 @@ gem 'deface'
 gem 'figaro', '>= 1.1.1'
 gem 'openssl'
 
+gem "bootsnap", "~> 1.3"
+
 gem 'decidim', DECIDIM_VERSION
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
 gem 'decidim-conferences', DECIDIM_VERSION
