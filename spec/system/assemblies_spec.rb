@@ -5,7 +5,7 @@ require "rails_helper"
 describe "Visit assemblies", type: :system do
   let(:organization) { create :organization }
   let!(:assembly) { create(:assembly, organization: organization) }
-  
+
   context "when visiting the assemblies participatory space with tags" do
     before do
       stub_const("I2cat::HOST_W_CUSTOM_TAGS_ASSEMBLIES", organization.host)

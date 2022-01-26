@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Decidim::Assemblies::AssemblyMCell.class_eval do
-
   alias_method :original_statuses, :statuses
 
   private
@@ -17,10 +16,10 @@ Decidim::Assemblies::AssemblyMCell.class_eval do
   def open_close_status
     closing_date = model.closing_date
 
-    if closing_date > Date.today
-      content_tag(:p, t(".open"), class: 'tag open')
+    if closing_date > Time.zone.today
+      tag.p(t(".open"), class: "tag open")
     else
-      content_tag(:p, t(".close"), class: 'tag close')
+      tag.p(t(".close"), class: "tag close")
     end
   end
 end
