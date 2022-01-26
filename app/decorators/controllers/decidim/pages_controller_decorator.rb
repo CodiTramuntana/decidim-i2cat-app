@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::PagesController.class_eval do
   alias_method :original_index, :index
 
