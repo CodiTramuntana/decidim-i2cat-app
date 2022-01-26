@@ -27,3 +27,7 @@ public/uploads
 /config/deploy.rb
 /config/deploy/*
 /Capfile
+
+# Ignore test app
+spec/decidim_dummy_app/
+.rspec-failures

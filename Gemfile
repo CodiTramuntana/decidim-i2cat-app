@@ -16,6 +16,8 @@ gem "whenever"
 gem "figaro", ">= 1.1.1"
 gem "openssl"
 
+gem "bootsnap", "~> 1.3"
+
 gem "decidim", DECIDIM_VERSION
 gem "decidim-challenges", "~> 0.0.11", git: "https://github.com/gencat/decidim-module-challenges.git"
 gem "decidim-conferences", DECIDIM_VERSION
@@ -26,7 +28,7 @@ group :development, :test do
   gem "binding_of_caller"
   gem "byebug", platform: :mri
   gem "decidim-dev", DECIDIM_VERSION
-  gem "faker"
+  gem "faker", "~> 2.14.0"
 end
 
 group :development do

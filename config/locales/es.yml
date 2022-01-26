@@ -1,5 +1,9 @@
 es:
   decidim:
+    assemblies:
+      assembly_m:
+        close: Finalizada
+        open: Abierta
     challenges:
       challenges:
         orders:

@@ -1,5 +1,9 @@
 ca:
   decidim:
+    assemblies:
+      assembly_m:
+        close: Finalitzat
+        open: Obert
     challenges:
       challenges:
         orders:
