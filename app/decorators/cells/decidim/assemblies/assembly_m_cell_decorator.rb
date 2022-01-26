@@ -7,7 +7,7 @@ Decidim::Assemblies::AssemblyMCell.class_eval do
   private
 
   def statuses
-    if current_organization.host == "participa.challenge.cat"
+    if current_organization.host == I2cat::HOST_W_CUSTOM_TAGS_ASSEMBLIES
       [:open_close, :follow]
     else
       original_statuses
