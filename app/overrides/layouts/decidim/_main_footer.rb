@@ -28,11 +28,11 @@ i2cat_text = <<~I2CAT
     <div class="row"><br /></div>
   </section>
 I2CAT
-Deface::Override.new(virtual_path: +'layouts/decidim/_main_footer',
-                     name: 'i2cat_footer2',
-                     insert_after: 'div.main-footer',
+Deface::Override.new(virtual_path: +"layouts/decidim/_main_footer",
+                     name: "i2cat_footer2",
+                     insert_after: "div.main-footer",
                      text: "<section>#{i2cat_text}</section",
-                     original: '4acba79b4f172ee3abaeb8a2f5385440646a50a8')
+                     original: "4acba79b4f172ee3abaeb8a2f5385440646a50a8")
 
 feder_text = <<~EOFEDER
   <section class="footer__subhero extended subhero home-section">
@@ -57,8 +57,8 @@ feder_text = <<~EOFEDER
   </section>
 EOFEDER
 
-Deface::Override.new(virtual_path: +'layouts/decidim/_main_footer',
-                     name: 'feder_footer',
-                     insert_after: 'div.main-footer',
+Deface::Override.new(virtual_path: +"layouts/decidim/_main_footer",
+                     name: "feder_footer",
+                     insert_after: "div.main-footer",
                      text: feder_text,
-                     original: '4acba79b4f172ee3abaeb8a2f5385440646a50a8')
+                     original: "4acba79b4f172ee3abaeb8a2f5385440646a50a8")
