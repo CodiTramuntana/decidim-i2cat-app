@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 InvisibleCaptcha.setup do |config|
-  config.honeypots << "another_fake_attribute"
+  config.honeypots << %w(user_spatial_address user_address_combo participant_user_address participant_user_address
+                         user_address_number user_second_online_address user_phone_with_extension participant_code_number)
   config.visual_honeypots = false
   config.timestamp_threshold = 10
   config.timestamp_enabled = false
