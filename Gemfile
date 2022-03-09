@@ -21,7 +21,7 @@ gem "bootsnap", "~> 1.3"
 gem "decidim", DECIDIM_VERSION
 gem "decidim-challenges", "~> 0.0.11", git: "https://github.com/gencat/decidim-module-challenges.git"
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/CodiTramuntana/decidim-module-term_customizer"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.24-stable"
 
 group :development, :test do
   gem "better_errors"
