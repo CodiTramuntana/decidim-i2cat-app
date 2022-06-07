@@ -27,6 +27,9 @@ ca:
       proposals:
         endorsements_card_row:
           comments: Comentaris
+  errors:
+    messages:
+      extension_whitelist_error: El format del fitxer és invàlid
   models:
     assembly:
       followers: Seguidoras
