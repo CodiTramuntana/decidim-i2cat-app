@@ -17,17 +17,21 @@
 /yarn-error.log
 
 .byebug_history
+.rspec-failures
 
 # Ignore public uploads
 public/uploads
 # Ignore application configuration
 /config/application.yml
-/RailsApplication1/nbproject/private/
 # Ignore deploy secrets
 /config/deploy.rb
 /config/deploy/*
 /Capfile
 
-# Ignore test app
-spec/decidim_dummy_app/
-.rspec-failures
+spec/decidim_dummy_app
+
+/public/packs
+/public/packs-test
+/public/decidim-packs
+
+/config/master.key
