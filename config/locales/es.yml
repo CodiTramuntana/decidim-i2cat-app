@@ -27,9 +27,6 @@ es:
       proposals:
         endorsements_card_row:
           comments: Comentarios
-  errors:
-    messages:
-      extension_whitelist_error: El formato del fichero es inválido
   models:
     assembly:
       followers: Seguidoras
