@@ -22,9 +22,9 @@ gem "openssl"
 gem "nokogiri", "1.13.3"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-challenges", "~> 0.0.15", git: "https://github.com/gencat/decidim-module-challenges.git"
+gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: 'v0.1.0'
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.24-stable"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.25-stable'
 
 group :development, :test do
   gem "better_errors"

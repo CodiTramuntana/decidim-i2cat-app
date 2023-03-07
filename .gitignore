@@ -35,3 +35,6 @@ spec/decidim_dummy_app
 /public/decidim-packs
 
 /config/master.key
+
+/public/packs
+/public/packs-test
