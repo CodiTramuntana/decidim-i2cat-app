@@ -6,14 +6,15 @@ Decidim::PagesController.class_eval do
   def index
     enforce_permission_to :read, :public_page
 
-    if current_organization.host == "reptes.dca.cat"
+    case current_organization.host
+    when "reptes.dca.cat"
       @topic = Decidim::StaticPageTopic.find_by("title->>'ca' = 'La DCA'")
       @page = current_organization.static_pages.first
       enforce_permission_to :read, :public_page, page: @page
       @pages = @topic&.pages
 
       render template: "decidim/pages/who_we_are"
-    elsif current_organization.host == "participa.challenge.cat"
+    when "participa.challenge.cat"
       @page = Decidim::StaticPage.find_by(slug: "smartcataloniachallenge")
       redirect_to page_path(@page || StaticPage.take)
     else

@@ -11,8 +11,8 @@ gem "deface"
 gem "delayed_job_active_record"
 gem "puma"
 gem "uglifier", ">= 1.3.0"
-gem "whenever"
 gem "webpacker"
+gem "whenever"
 
 gem "figaro", ">= 1.1.1"
 gem "openssl"
@@ -22,9 +22,9 @@ gem "openssl"
 gem "nokogiri", "1.13.3"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: 'v0.1.0'
+gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.1.0"
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.25-stable'
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.25-stable"
 
 group :development, :test do
   gem "better_errors"
