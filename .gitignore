@@ -27,6 +27,7 @@ public/uploads
 /config/deploy.rb
 /config/deploy/*
 /Capfile
+config/puma.rb
 
 spec/decidim_dummy_app
 
