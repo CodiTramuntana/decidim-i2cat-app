@@ -13,9 +13,6 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
 .byebug_history
 .rspec-failures
 
@@ -23,6 +20,7 @@
 public/uploads
 # Ignore application configuration
 /config/application.yml
+/config/puma.rb
 # Ignore deploy secrets
 /config/deploy.rb
 /config/deploy/*
@@ -33,9 +31,13 @@ spec/decidim_dummy_app
 
 /public/packs
 /public/packs-test
-/public/decidim-packs
+
+node_modules/
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
 
 /config/master.key
+public/decidim-packs/
 
-/public/packs
-/public/packs-test
+storage/
