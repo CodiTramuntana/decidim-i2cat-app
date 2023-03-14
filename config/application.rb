@@ -2,7 +2,11 @@
 
 require_relative "boot"
 
-require "rails/all"
+require "decidim/rails"
+# Add the frameworks used by your app that are not loaded by Decidim.
+# require "action_cable/engine"
+# require "action_mailbox/engine"
+# require "action_text/engine"
 
 require "net/http"
 require "openssl"
@@ -26,7 +30,11 @@ module DecidimI2catApp
 
     # Make decorators available
     config.to_prepare do
-      Dir.glob(Rails.root + "app/decorators/**/*_decorator*.rb").each do |c|
+      # activate Decidim LayoutHelper for the overriden views
+      ::Decidim::Admin::ApplicationController.helper ::Decidim::LayoutHelper
+      ::Decidim::ApplicationController.helper ::Decidim::LayoutHelper
+
+      Dir.glob(Rails.root.join("app/decorators/**/*_decorator*.rb")).each do |c|
         require_dependency(c)
       end
     end

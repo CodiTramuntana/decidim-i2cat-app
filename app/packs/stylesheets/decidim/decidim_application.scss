@@ -1,0 +1,39 @@
+// This is a file that can be overridden by the application in order to override styles
+// Notice that this file is included at the very end of the stylesheets packs to have
+// more priority
+//
+// To override CSS variables or Foundation settings use _decidim-settings.scss
+//
+// By default this is empty.
+
+.main-footer .footer-nav{
+  a[href^="/open-data/download"] { 
+    display: none; 
+  }  
+}
+
+.floating-helper-container{
+  display: none;
+}
+
+.navbar{
+  background-color: #595959;
+}
+
+.open_close_status {
+  .tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    min-width: 78px;
+
+    &.close {
+      background-color: $red-tag;
+    }
+
+    &.open {
+      background-color: $green-tag;
+    }
+  }
+}

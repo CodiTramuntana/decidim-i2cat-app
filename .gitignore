@@ -13,21 +13,31 @@
 !/log/.keep
 !/tmp/.keep
 
-/node_modules
-/yarn-error.log
-
 .byebug_history
+.rspec-failures
 
 # Ignore public uploads
 public/uploads
 # Ignore application configuration
 /config/application.yml
-/RailsApplication1/nbproject/private/
+/config/puma.rb
 # Ignore deploy secrets
 /config/deploy.rb
 /config/deploy/*
 /Capfile
+config/puma.rb
 
-# Ignore test app
-spec/decidim_dummy_app/
-.rspec-failures
+spec/decidim_dummy_app
+
+/public/packs
+/public/packs-test
+
+node_modules/
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+/config/master.key
+public/decidim-packs/
+
+storage/
