@@ -4,11 +4,20 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/CodiTramuntana/decidim.git", branch: "release/0.26-stable" }.freeze
+DECIDIM_VERSION = { git: "https://github.com/CodiTramuntana/decidim.git", branch: "release/0.27-stable" }.freeze
 
 gem "daemons"
 gem "deface"
 gem "delayed_job_active_record"
+
+gem "decidim", DECIDIM_VERSION
+gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", branch: "upgrade-to-decidim-0-27"
+gem "decidim-conferences", DECIDIM_VERSION
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer"
+
+# temporal solution while gems embrace new psych 4 (the default in Ruby 3.1) behavior.
+gem "psych", "< 4"
+
 gem "puma"
 gem "uglifier", ">= 1.3.0"
 gem "webpacker"
@@ -21,11 +30,6 @@ gem "openssl"
 # More exactly in comments in the homepage and in processes cards in the processes listing
 gem "nokogiri", "1.13.3"
 
-gem "decidim", DECIDIM_VERSION
-gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.2.0"
-gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.26-stable"
-
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
@@ -37,7 +41,7 @@ end
 
 group :development do
   gem "letter_opener_web"
-  gem "listen", "~> 3.1.0"
+  gem "listen"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console"
