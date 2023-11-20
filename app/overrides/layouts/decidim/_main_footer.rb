@@ -32,7 +32,7 @@ Deface::Override.new(virtual_path: +"layouts/decidim/_main_footer",
                      name: "i2cat_footer2",
                      insert_after: "div.main-footer",
                      text: "<section>#{i2cat_text}</section",
-                     original: "45e003ac5969458f067be9d4c851c674cbe7f3d3")
+                     original: "25277dbf8f6306c2d1703a6fe82abf2be777fc7a")
 
 feder_text = <<~EOFEDER
   <section class="footer__subhero extended subhero home-section">
@@ -61,4 +61,4 @@ Deface::Override.new(virtual_path: +"layouts/decidim/_main_footer",
                      name: "feder_footer",
                      insert_after: "div.main-footer",
                      text: feder_text,
-                     original: "45e003ac5969458f067be9d4c851c674cbe7f3d3")
+                     original: "25277dbf8f6306c2d1703a6fe82abf2be777fc7a")

@@ -1,11 +1,13 @@
 <div id="<%= dom_id(model, :follow) %>">
   <% if current_user %>
     <% if current_user.follows?(model) %>
+      <%# Start i2cat customization %>
       <%= button_to decidim.follow_path(slug: (params[:slug] || params[:assembly_slug])), class: button_classes, params: { follow: { followable_gid: model.to_sgid.to_s, inline: inline? } }, data: { disable: true }, method: :delete, remote: true do %>
+      <%# End i2cat customization %>
         <span class="icon-wrap">
           <%= icon "bell", icon_options %>
-          <span aria-hidden="true"><%= model.followers.count %></span>
-          <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: model.followers.count) %></span>
+          <span aria-hidden="true"><%= followers_count %></span>
+          <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: followers_count) %></span>
         </span>
         <span class="text-wrap">
           <%= t("follows.destroy.button", scope: "decidim") %>
@@ -13,11 +15,13 @@
         </span>
       <% end %>
     <% else %>
+      <%# Start i2cat customization %>
       <%= button_to decidim.follow_path(slug: (params[:slug] || params[:assembly_slug])), class: button_classes, params: { follow: { followable_gid: model.to_sgid.to_s, inline: inline? } }, data: { disable: true }, remote: true do %>
+      <%# End i2cat customization %>
         <span class="icon-wrap">
           <%= icon "bell", icon_options %>
-          <span aria-hidden="true"><%= model.followers.count %></span>
-          <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: model.followers.count) %></span>
+          <span aria-hidden="true"><%= followers_count %></span>
+          <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: followers_count) %></span>
         </span>
         <span class="text-wrap">
           <% if current_user.follows?(model.try(:participatory_space)) %>
@@ -42,8 +46,8 @@
       remote: true) do %>
       <span class="icon-wrap">
         <%= icon "bell", icon_options %>
-        <span aria-hidden="true"><%= model.followers.count %></span>
-        <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: model.followers.count) %></span>
+        <span aria-hidden="true"><%= followers_count %></span>
+        <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: followers_count) %></span>
       </span>
       <span class="text-wrap">
         <%= t("follows.create.button", scope: "decidim") %>
