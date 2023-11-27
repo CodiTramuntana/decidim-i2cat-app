@@ -62,3 +62,9 @@ bundle exec rspec spec
 
 ### Other stuff
   - `decidim-core/app/views/layouts/decidim/_head.html.erb`
+
+### Customize process navbar in participatory process
+
+Changed the process nav to always show as a dropdown for the assemblies/atles.
+
+  - `app/views/decidim/shared/_extended_navigation_bar.html.erb`
