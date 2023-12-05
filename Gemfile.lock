@@ -117,10 +117,10 @@ GIT
 
 GIT
   remote: https://github.com/gencat/decidim-module-challenges.git
-  revision: 4500aac6055e116258b53ee439b69431f31b1362
-  tag: v0.3.0
+  revision: 836c32069b00610d3dce8249e1ced558abe6d574
+  tag: v0.3.1
   specs:
-    decidim-challenges (0.3.0)
+    decidim-challenges (0.3.1)
       decidim-core (~> 0.27)
 
 GIT
