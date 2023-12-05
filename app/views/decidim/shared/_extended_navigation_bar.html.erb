@@ -1,0 +1,7 @@
+<div class="row expanded">
+  <% if items.first[:url] == "/assemblies/atles" %>
+    <%= render partial: "decidim/shared/custom_process_nav", locals: { active_item: active_item, items: items, extra_items: extra_items } %>
+  <% else %>
+    <%= render partial: "decidim/shared/normal_process_nav", locals: { active_item: active_item, items: items, extra_items: extra_items, max_items: max_items } %>
+  <% end %>
+</div>
