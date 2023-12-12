@@ -16,13 +16,6 @@
             <% end %>
           </li>
         <% end %>
-        <% extra_items.each do |item| %>
-          <li class="<%= "is-active" if item[:active] %>">
-            <%= link_to item[:url], class: "process-nav__link #{item[:active] ? 'active' : nil}" do %>
-              <%= item[:name] %>
-            <% end %>
-          </li>
-        <% end %>
       </ul>
     </div>
   </div>
