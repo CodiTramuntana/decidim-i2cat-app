@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   pool: <%= ENV['DB_POOL'] %>
   host: <%= ENV['DB_HOST'] %>
-  database: <%= ENV['DB_DATABASE'] %>
+  database: <%= ENV['DB_DATABASE'] || 'i2cat_app_dev' %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   port: <%= ENV['DB_PORT'] %>
@@ -14,6 +14,7 @@ development:
 
 test:
   <<: *default
+  database: <%= ENV['DB_TEST_DATABASE'] || 'i2cat_app_test' %>
 
 integration:
   <<: *default

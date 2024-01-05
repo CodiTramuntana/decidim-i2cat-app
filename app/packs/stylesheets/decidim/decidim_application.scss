@@ -37,3 +37,30 @@
     }
   }
 }
+
+// Custom process nav to set mobile view in desktop
+.custom-process-nav {
+  padding: 0.75rem 1rem;
+
+  .process-nav__content {
+    display: none;
+    
+    li.is-active {
+      display: none;
+    }
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  li {
+    padding-left: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

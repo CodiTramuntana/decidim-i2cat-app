@@ -6,7 +6,7 @@ module Decidim
       i18n_attributes :resource_user_name
 
       def resource_text
-        translated_attribute(resource.body)
+        translated_attribute(resource.title)
       end
 
       def resource_user_name
