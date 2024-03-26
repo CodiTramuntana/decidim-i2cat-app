@@ -11,7 +11,7 @@ gem "deface"
 gem "delayed_job_active_record"
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.3.1"
+gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.3.2"
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer"
 
