@@ -64,3 +64,18 @@
     align-items: flex-start;
   }
 }
+
+body[data-host="reptes.dca.cat"] {
+  .smart-catalonia-logo {
+    display: none;
+  }
+
+  .logos {
+    justify-content: center !important;
+    gap: 300px;
+  }
+
+  .footer-feder {
+    display: none;
+  }
+}
