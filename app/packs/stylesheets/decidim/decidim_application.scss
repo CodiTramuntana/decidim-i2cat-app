@@ -64,3 +64,19 @@
     align-items: flex-start;
   }
 }
+
+// This is only for reptes.dca.cat
+body[data-organization-id="1"] {
+  .smart-catalonia-logo {
+    display: none;
+  }
+
+  .logos {
+    justify-content: center !important;
+    gap: 300px;
+  }
+
+  .footer-feder {
+    display: none;
+  }
+}

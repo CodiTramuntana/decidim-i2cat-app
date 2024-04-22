@@ -17,7 +17,7 @@ i2cat_text = <<~I2CAT
             <%= image_pack_tag "media/images/logo_I2CAT.jpg" %>
           </a>
         </div>
-        <div class="medium-2 small-12">
+        <div class="medium-2 small-12 smart-catalonia-logo">
           <a rel="license" class="cc-badge part-logo-footer-gencat"
             href="http://smartcatalonia.gencat.cat/ca/inici/" target="_blank">
             <%= image_pack_tag "media/images/logo_SmartCatalonia.jpg" %>
@@ -35,7 +35,7 @@ Deface::Override.new(virtual_path: +"layouts/decidim/_main_footer",
                      original: "25277dbf8f6306c2d1703a6fe82abf2be777fc7a")
 
 feder_text = <<~EOFEDER
-  <section class="footer__subhero extended subhero home-section">
+  <section class="footer__subhero extended subhero home-section footer-feder">
     <div class="row">
       <div class="columns small-12 large-9">
         <div class="row">
