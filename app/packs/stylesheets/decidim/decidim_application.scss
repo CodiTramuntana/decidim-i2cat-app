@@ -65,7 +65,8 @@
   }
 }
 
-body[data-host="reptes.dca.cat"] {
+// This is only for reptes.dca.cat
+body[data-organization-id="1"] {
   .smart-catalonia-logo {
     display: none;
   }
