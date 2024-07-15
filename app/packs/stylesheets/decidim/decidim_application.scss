@@ -80,3 +80,11 @@ body[data-organization-id="1"] {
     display: none;
   }
 }
+
+// This is only for agendaruralcat.cat
+body[data-organization-id="5"] {
+  .footer-feder,
+  .custom-footer {
+    display: none;
+  }
+}

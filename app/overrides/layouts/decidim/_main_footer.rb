@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 i2cat_text = <<~I2CAT
-  <section style="background: #fff;">
+  <section class="custom-footer" style="background: #fff;">
     <div class="row"><br/></div>
     <div class="row"">
       <div class="logos" style="display: flex;justify-content:space-between;align-items:center;">
