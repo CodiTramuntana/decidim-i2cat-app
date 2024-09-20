@@ -10,16 +10,18 @@ gem "daemons"
 gem "deface"
 gem "delayed_job_active_record"
 
-gem "decidim", DECIDIM_VERSION
+gem "decidim", "0.27.9", DECIDIM_VERSION
 gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.3.3"
 gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
-gem "decidim-cdtb", "0.1.3"
+gem "decidim-cdtb", git: "https://github.com/CodiTramuntana/decidim-module-cdtb.git", branch: "main"
 
 # temporal solution while gems embrace new psych 4 (the default in Ruby 3.1) behavior.
 gem "psych", "< 4"
 
+# required by puma
+gem "matrix"
 gem "puma"
 gem "uglifier", ">= 1.3.0"
 gem "webpacker"
