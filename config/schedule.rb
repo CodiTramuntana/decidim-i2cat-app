@@ -13,3 +13,7 @@ end
 every :monday, at: "3:00 am" do
   rake "tmp:clear"
 end
+
+every :monday, at: "3:00 am" do
+  rake "tmp:clear"
+end
