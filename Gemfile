@@ -15,7 +15,7 @@ gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challen
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
-gem "decidim-cdtb", git: "https://github.com/CodiTramuntana/decidim-module-cdtb.git", branch: "main"
+gem "decidim-cdtb"
 
 # temporal solution while gems embrace new psych 4 (the default in Ruby 3.1) behavior.
 gem "psych", "< 4"
