@@ -1,14 +1,4 @@
 GIT
-  remote: https://github.com/CodiTramuntana/decidim-module-cdtb.git
-  revision: 04d4a31f5646ab43e3b87e55bc300c428a98681d
-  branch: main
-  specs:
-    decidim-cdtb (0.2.0)
-      decidim (>= 0.27.0)
-      rails (>= 6)
-      ruby-progressbar
-
-GIT
   remote: https://github.com/CodiTramuntana/decidim.git
   revision: 21c297b5feafdeae836090a3a4ed3766aae3a69d
   branch: release/0.27-stable
@@ -370,6 +360,10 @@ GEM
       activesupport (>= 4.0, < 7)
       rspec (~> 3.0)
     debug_inspector (1.2.0)
+    decidim-cdtb (0.2.0)
+      decidim (>= 0.27.0)
+      rails (>= 6)
+      ruby-progressbar
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
@@ -879,7 +873,7 @@ DEPENDENCIES
   byebug
   daemons
   decidim (= 0.27.9)!
-  decidim-cdtb!
+  decidim-cdtb
   decidim-challenges!
   decidim-conferences!
   decidim-dev!
