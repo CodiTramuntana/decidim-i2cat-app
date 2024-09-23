@@ -654,6 +654,18 @@ Style/ModuleFunction:
     - module_function
     - extend_self
 
+Layout/LineLength:
+  Max: 180
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  Exclude:
+    - "**/spec/**/*"
+
 Layout/MultilineArrayBraceLayout:
   EnforcedStyle: symmetrical
   SupportedStyles:
@@ -1088,18 +1100,6 @@ Metrics/CyclomaticComplexity:
   Max: 9
   Exclude:
     - "**/*/permissions.rb"
-
-Metrics/LineLength:
-  Max: 180
-  # To make it possible to copy or click on URIs in the code, we allow lines
-  # containing a URI to be longer than Max.
-  AllowHeredoc: true
-  AllowURI: true
-  URISchemes:
-    - http
-    - https
-  Exclude:
-    - "**/spec/**/*"
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
