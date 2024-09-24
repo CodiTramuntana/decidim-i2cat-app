@@ -44,7 +44,7 @@ describe "Homepage", type: :system do
 
     it "renders its custom menu items" do
       within ".navbar" do
-        expect(page).to have_content("Home\nAgenda Rural de Catalunya\nAtles del Món Rural\nHelp")
+        expect(page).to have_content("Home\nCatalonia's Rural Agenda\nRural World Atlas\nHelp")
       end
     end
   end
