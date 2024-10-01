@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Decidim::Assemblies::AssemblyMCellDecorator
+module ::Cells::Decidim::Assemblies::AssemblyMCellDecorator
 end
 
 ::Decidim::Assemblies::AssemblyMCell.class_eval do
