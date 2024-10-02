@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Decidim::FollowsControllerDecorator
+module ::Decidim::FollowsControllerDecorator
 end
 
 ::Decidim::FollowsController.class_eval do

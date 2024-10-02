@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Decidim::PagesControllerDecorator
+module ::Controllers::Decidim::PagesControllerDecorator
 end
 
 ::Decidim::PagesController.class_eval do
