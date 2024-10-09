@@ -10,8 +10,8 @@ gem "daemons"
 gem "deface"
 gem "delayed_job_active_record"
 
-gem "decidim", "0.27.9", DECIDIM_VERSION
-gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.3.3"
+gem "decidim", DECIDIM_VERSION
+gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challenges.git", tag: "v0.4.0"
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
