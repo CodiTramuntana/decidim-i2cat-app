@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-Decidim::FollowsController.class_eval do
+module ::Decidim::FollowsControllerDecorator
+end
+
+::Decidim::FollowsController.class_eval do
   def create
     @form = form(Decidim::FollowForm).from_params(params)
     @inline = params[:follow][:inline] == "true"

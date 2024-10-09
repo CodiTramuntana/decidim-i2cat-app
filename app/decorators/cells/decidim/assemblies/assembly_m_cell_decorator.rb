@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-Decidim::Assemblies::AssemblyMCell.class_eval do
+module ::Cells::Decidim::Assemblies::AssemblyMCellDecorator
+end
+
+::Decidim::Assemblies::AssemblyMCell.class_eval do
   private
 
   def statuses

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rails_helper"
+require "spec_helper"
 require "decidim/core/test/shared_examples/space_cell_changes_button_text_cta"
 
 module Decidim::Assemblies

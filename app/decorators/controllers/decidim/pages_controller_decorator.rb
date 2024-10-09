@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-Decidim::PagesController.class_eval do
+module ::Controllers::Decidim::PagesControllerDecorator
+end
+
+::Decidim::PagesController.class_eval do
   alias_method :original_index, :index
 
   def index
