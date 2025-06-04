@@ -45,7 +45,7 @@ describe "Homepage", type: :system do
 
     it "renders its custom menu title" do
       expect(page).to have_selector("h3.menu-bar__main-dropdown__title", visible: :all)
-      expect(page).to have_content("Benvinguda a la plataforma participativa Decidim Application.")
+      expect(page).to have_content("Home\nCatalonia's Rural Agenda\nRural World Atlas")
     end
   end
 end

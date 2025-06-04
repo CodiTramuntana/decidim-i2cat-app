@@ -57,7 +57,7 @@ The following files should be modified:
 Prepare the database:
 
 ```bash
-RAILS_ENV=test bin/rake db:create db:migrate
+RAILS_ENV=test bin/rake db:create
 bundle exec rails decidim_conferences:install:migrations
 bundle exec rails decidim_challenges:install:migrations
 RAILS_ENV=test bundle exec rails db:migrate
