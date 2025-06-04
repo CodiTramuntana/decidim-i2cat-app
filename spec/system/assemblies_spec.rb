@@ -13,13 +13,11 @@ describe "Visit assemblies", type: :system do
     end
 
     it "lists the parent assemblies" do
-      within "#parent-assemblies" do
-        within "#parent-assemblies h3" do
-          expect(page).to have_content("1")
-        end
+      expect(page).to have_selector("h1.title-decorator")
 
-        expect(page).to have_selector(".open_close_status")
-        expect(page).not_to have_selector(".creation_date_status")
+      within "#assemblies-grid" do
+        expect(page).to have_selector("h2.decorator")
+        expect(page).to have_selector(".card__grid-grid")
       end
     end
   end

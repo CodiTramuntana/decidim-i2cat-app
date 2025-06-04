@@ -8,4 +8,4 @@ unless env.development? || env.test?
   keys += %w(GEOCODER_LOOKUP_API_KEY SECRET_KEY_BASE)
   keys += %w(ARCA_ORGANIZATION_ID)
 end
-Figaro.require_keys(keys)
+Figjam.require_keys(keys)

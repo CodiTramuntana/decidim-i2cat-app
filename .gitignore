@@ -32,7 +32,6 @@ spec/decidim_dummy_app/
 /public/packs/
 /public/packs-test/
 /public/decidim-packs/
-
 /public/sw.*
 
 node_modules/
@@ -43,3 +42,4 @@ storage/
 yarn-debug.log*
 
 /config/master.key
+tailwind.config.js

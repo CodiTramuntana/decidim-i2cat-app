@@ -44,6 +44,14 @@ $ git checkout master
 $ git pull clean-app master --allow-unrelated-histories
 ```
 
+## Customize your fork
+
+The following files should be modified:
+
+- package.json
+- config/application.rb
+- config/initializers/decidim.rb
+
 ## Testing
 
 Prepare the database:
@@ -87,11 +95,17 @@ Documentation in `docs/migrate_to_clean_app.md`.
   - `app/views/decidim/shared/participatory_space_filters/_filters.html.erb`
 
 ### Redirect index Pages to "smartcataloniachallenge" help Page. (https://github.com/CodiTramuntana/decidim-i2cat-app/pull/33)
-  
+
 #### Decorators
-  - `app/decorators/controllers/decidim/pages_controller_decorator.rb`
+- `app/decorators/controllers/decidim/pages_controller_decorator.rb`
 
 ### Change statuses tags
+
+Add `require "rails_helper"` to your specs and execute them from the **root directory**, i.e.:
+ 	
+## Upgrades with clean-app
+	
+Documentation in `docs/upgrade_apps.md`.
 
 #### Decorators
   - `app/decorators/cells/decidim/assemblies/assembly_m_cell_decorator.rb`

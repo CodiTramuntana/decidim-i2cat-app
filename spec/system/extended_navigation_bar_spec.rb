@@ -8,6 +8,8 @@ describe "Extended navigation bar", type: :system do
   let!(:organization) { create(:organization) }
   let!(:normal_assembly) { create(:assembly, :published, organization: organization) }
   let!(:atles_assembly) { create(:assembly, :published, organization: organization, slug: "atles") }
+  # añadir content block de home
+  let!(:global_menu_content_block) { create(:content_block, organization:, scope_name: :homepage, manifest_name: :global_menu) }
 
   before do
     switch_to_host(organization.host)
@@ -21,6 +23,8 @@ describe "Extended navigation bar", type: :system do
 
   it "render custom navigation bar in when assembly is 'atles'" do
     visit resource_locator(atles_assembly).path
+
+    #save_and_open_page
 
     expect(page).to have_css(".custom-process-nav")
   end
