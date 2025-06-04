@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "Redirect Middleware", type: :system do
+describe "Redirect Middleware" do
   let!(:organization) { create(:organization) }
   let!(:what_is_page) { create(:static_page, :with_topic, organization: organization, title: { ca: "Què és?" }, slug: "que-es") }
 

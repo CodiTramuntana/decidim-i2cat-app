@@ -18,8 +18,8 @@ gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-te
 
 gem "matrix"
 gem "puma"
-gem "whenever"
 gem "uglifier", ">= 1.3.0"
+gem "whenever"
 
 gem "openssl"
 

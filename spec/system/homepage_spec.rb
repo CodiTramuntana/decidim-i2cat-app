@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe "Homepage", type: :system do
+describe "Homepage" do
   include Decidim::SanitizeHelper
 
   let!(:organization) do
@@ -19,7 +19,7 @@ describe "Homepage", type: :system do
 
   before do
     ENV["ARCA_ORGANIZATION_ID"]= arca_organization_id
-    switch_to_host(organization.  host)
+    switch_to_host(organization.host)
     visit decidim.root_path(locale: I18n.locale)
   end
 
@@ -31,9 +31,9 @@ describe "Homepage", type: :system do
     end
 
     subhero_msg = translated(organization.description)
-                    .gsub(%r{</p>\s+<p>}, "<br><br>")
-                    .gsub(%r{<p>(((?!</p>).)*)</p>}mi, "\\1")
-                    .gsub(%r{<script>(((?!</script>).)*)</script>}mi, "\\1")
+                  .gsub(%r{</p>\s+<p>}, "<br><br>")
+                  .gsub(%r{<p>(((?!</p>).)*)</p>}mi, "\\1")
+                  .gsub(%r{<script>(((?!</script>).)*)</script>}mi, "\\1")
 
     within("section#sub_hero") do
       expect(page).to have_content(subhero_msg)
@@ -44,7 +44,7 @@ describe "Homepage", type: :system do
     let(:arca_organization_id) { organization.id.to_s }
 
     it "renders its custom menu title" do
-      expect(page).to have_selector("h3.menu-bar__main-dropdown__title", visible: :all)
+      expect(page).to have_css("h3.menu-bar__main-dropdown__title", visible: :all)
       expect(page).to have_content("Home\nCatalonia's Rural Agenda\nRural World Atlas")
     end
   end
