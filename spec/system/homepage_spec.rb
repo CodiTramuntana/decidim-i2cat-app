@@ -42,12 +42,12 @@ describe "Homepage" do
 
   context "when organization is ARCA" do
     let(:arca_organization_id) { organization.id.to_s }
-    
+
     it "renders its custom menu title" do
-        expect(page).to have_css("h3.menu-bar__main-dropdown__title", visible: :all)
-        expect(page).to have_content("Inici")
-        expect(page).to have_content("Agenda Rural de Catalunya")
-        expect(page).to have_content("Atles del Món Rural")
-      end
+      expect(page).to have_css("h3.menu-bar__main-dropdown__title", visible: :all)
+      expect(page).to have_content("Inici")
+      expect(page).to have_content("Agenda Rural de Catalunya")
+      expect(page).to have_content("Atles del Món Rural")
+    end
   end
 end
