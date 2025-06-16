@@ -10,7 +10,12 @@ describe "Homepage" do
       :organization,
       name: "Decidim Application",
       default_locale: :ca,
-      available_locales: [:ca, :en, :es]
+      available_locales: [:ca, :en, :es],
+      description: {
+        ca: "Missatge secundari\nInformació de l'organització",
+        es: "Mensaje secundario\nInformación de la organización",
+        en: "Subhero message\nOrganization info"
+      }
     )
   end
   let!(:hero) { create(:content_block, organization: organization, scope_name: :homepage, manifest_name: :hero, settings: { "welcome_text_ca"=>"Benvinguda a Decidim Application" }) }
@@ -32,10 +37,7 @@ describe "Homepage" do
       expect(page).to have_content("Benvinguda a Decidim Application")
     end
 
-    subhero_msg = translated(organization.description)
-                  .gsub(%r{</p>\s+<p>}, "<br><br>")
-                  .gsub(%r{<p>(((?!</p>).)*)</p>}mi, "\\1")
-                  .gsub(%r{<script>(((?!</script>).)*)</script>}mi, "\\1")
+    subhero_msg = organization.description[:ca]
 
     within("section#sub_hero") do
       expect(page).to have_content(subhero_msg)
