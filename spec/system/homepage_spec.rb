@@ -18,6 +18,7 @@ describe "Homepage" do
   let(:arca_organization_id) { nil }
 
   before do
+    I18n.locale = :ca
     ENV["ARCA_ORGANIZATION_ID"]= arca_organization_id
     switch_to_host(organization.host)
     visit decidim.root_path(locale: I18n.locale)
@@ -42,7 +43,7 @@ describe "Homepage" do
 
   context "when organization is ARCA" do
     let(:arca_organization_id) { organization.id.to_s }
-
+    puts "#{I18n.locale}"
     it "renders its custom menu title" do
       expect(page).to have_css("h3.menu-bar__main-dropdown__title", visible: :all)
       expect(page).to have_content("Inici")
