@@ -16,6 +16,7 @@ gem "decidim-challenges", git: "https://github.com/gencat/decidim-module-challen
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 
+# required by puma
 gem "matrix"
 gem "puma"
 gem "uglifier", ">= 1.3.0"
