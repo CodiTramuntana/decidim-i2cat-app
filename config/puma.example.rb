@@ -13,7 +13,6 @@ state_path "tmp/pids/puma.state"
 
 preload_app!
 
-rackup DefaultRackup
 port ENV.fetch("PORT", nil) || 3000
 env = ENV.fetch("RACK_ENV", nil) || ENV.fetch("RAILS_ENV", nil) || :production
 environment env

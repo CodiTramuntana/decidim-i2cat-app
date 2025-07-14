@@ -9,8 +9,8 @@ on:
   pull_request:
 
 env:
-  RUBY_VERSION: 3.0.7
-  NODE_VERSION: 16.9.1
+  RUBY_VERSION: 3.1.1
+  NODE_VERSION: 18.17.1
 
 jobs:
   test:
@@ -35,11 +35,13 @@ jobs:
       DB_USERNAME: postgres
       DB_PASSWORD: postgres
       DB_HOST: localhost
+      SECRET_KEY_BASE: "secret_key_base"
 
     steps:
-      - uses: actions/checkout@v2.0.0
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+
       - uses: ruby/setup-ruby@master
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
@@ -51,9 +53,11 @@ jobs:
           chromedriver-version: 119.0.6045.105
 
       - name: List Chrome
+        shell: "bash"
         run: apt list --installed | grep chrome
 
       - name: Remove Chrome
+        shell: "bash"
         run: sudo apt remove google-chrome-stable
 
       - uses: browser-actions/setup-chrome@v1
@@ -61,10 +65,10 @@ jobs:
           chrome-version: 119.0.6045.105
 
       - name: Recover Ruby dependency cache
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: ./vendor/bundle
-          key: ${{ runner.OS }}-app-rubydeps-${{ hashFiles('Gemfile.lock') }}
+          key: ${{ runner.OS }}-rubydeps-${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
             ${{ runner.OS }}-app-rubydeps-${{ env.cache-name }}-
             ${{ runner.OS }}-app-rubydeps-
@@ -73,21 +77,19 @@ jobs:
         run: bundle config set --local path 'vendor/bundle'
 
       - name: Install Ruby deps
-        uses: nick-invision/retry@v2
+        uses: nick-fields/retry@v3
         with:
           timeout_minutes: 10
           max_attempts: 3
           retry_on: error
           command: bundle install --jobs 4 --retry 3
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
       - run: npm install
-      - name: Create test database
-        run: |
-          RAILS_ENV=test bundle exec rails db:create
-          RAILS_ENV=test bundle exec rails db:migrate
+      - run: bundle exec rake db:test:prepare
+        name: Setup database
       - run: bundle exec rspec
         name: Run specs

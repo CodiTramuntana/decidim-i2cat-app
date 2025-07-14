@@ -2,8 +2,8 @@
 
 require "spec_helper"
 
-describe "Visit assemblies", type: :system do
-  let(:organization) { create :organization }
+describe "Visit assemblies" do
+  let(:organization) { create(:organization) }
   let!(:assembly) { create(:assembly, organization: organization) }
 
   context "when visiting the assemblies participatory space with tags" do
@@ -13,13 +13,11 @@ describe "Visit assemblies", type: :system do
     end
 
     it "lists the parent assemblies" do
-      within "#parent-assemblies" do
-        within "#parent-assemblies h3" do
-          expect(page).to have_content("1")
-        end
+      expect(page).to have_css("h1.title-decorator")
 
-        expect(page).to have_selector(".open_close_status")
-        expect(page).not_to have_selector(".creation_date_status")
+      within "#assemblies-grid" do
+        expect(page).to have_css("h2.decorator")
+        expect(page).to have_css(".card__grid-grid")
       end
     end
   end

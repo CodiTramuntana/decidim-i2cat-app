@@ -2,9 +2,10 @@
 // Notice that this file is included at the very end of the stylesheets packs to have
 // more priority
 //
-// To override CSS variables or Foundation settings use _decidim-settings.scss
-//
 // By default this is empty.
+
+$red-tag: #d53636;
+$green-tag: #289f4c;
 
 .main-footer .footer-nav{
   a[href^="/open-data/download"] { 
@@ -30,10 +31,12 @@
 
     &.close {
       background-color: $red-tag;
+      //background-color: #FF0000;
     }
 
     &.open {
       background-color: $green-tag;
+      //background-color: #008000;
     }
   }
 }

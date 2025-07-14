@@ -7,7 +7,6 @@ module Decidim
       #
       class AssemblyFollowersController < Decidim::Assemblies::Admin::ApplicationController
         include Concerns::AssemblyAdmin
-        layout "decidim/admin/assembly"
 
         def index
           @followers = Decidim::Assembly.find_by(

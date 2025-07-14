@@ -10,7 +10,6 @@ default: &default
 
 development:
   <<: *default
-  min_messages: notice
 
 test:
   <<: *default

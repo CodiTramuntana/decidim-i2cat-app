@@ -30,6 +30,9 @@ es:
       proposals:
         endorsements_card_row:
           comments: Comentarios
+    shared:
+      follow_button:
+        sign_in_before_follow: Holaaaa
   models:
     assembly:
       followers: Seguidoras

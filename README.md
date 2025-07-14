@@ -44,12 +44,20 @@ $ git checkout master
 $ git pull clean-app master --allow-unrelated-histories
 ```
 
+## Customize your fork
+
+The following files should be modified:
+
+- package.json
+- config/application.rb
+- config/initializers/decidim.rb
+
 ## Testing
 
 Prepare the database:
 
 ```bash
-RAILS_ENV=test bin/rake db:create db:migrate
+RAILS_ENV=test bin/rake db:create
 bundle exec rails decidim_conferences:install:migrations
 bundle exec rails decidim_challenges:install:migrations
 RAILS_ENV=test bundle exec rails db:migrate
@@ -80,18 +88,13 @@ Documentation in `docs/migrate_to_clean_app.md`.
   - `app/controllers/decidim/assemblies/admin/assembly_followers_controller.rb`
   - `app/views/decidim/assemblies/admin/assembly_followers/index.html.erb`
 
-### Hide "àmbits", "àreas" and "mostrar" filters. (https://github.com/CodiTramuntana/decidim-i2cat-app/pull/35)
-
-#### Overrides
-  - `app/views/decidim/assemblies/_filter_by_type.html.erb`
-  - `app/views/decidim/shared/participatory_space_filters/_filters.html.erb`
-
-### Redirect index Pages to "smartcataloniachallenge" help Page. (https://github.com/CodiTramuntana/decidim-i2cat-app/pull/33)
-  
-#### Decorators
-  - `app/decorators/controllers/decidim/pages_controller_decorator.rb`
-
 ### Change statuses tags
+
+Add `require "rails_helper"` to your specs and execute them from the **root directory**, i.e.:
+ 	
+## Upgrades with clean-app
+	
+Documentation in `docs/upgrade_apps.md`.
 
 #### Decorators
   - `app/decorators/cells/decidim/assemblies/assembly_m_cell_decorator.rb`
@@ -104,12 +107,3 @@ Documentation in `docs/migrate_to_clean_app.md`.
 ### Custom footer
 #### Overrides
   - `decidim-core/app/views/layouts/decidim/_main_footer.html.erb`
-
-### Other stuff
-  - `decidim-core/app/views/layouts/decidim/_head.html.erb`
-
-### Customize process navbar in participatory process
-
-Changed the process nav to always show as a dropdown for the assemblies/atles.
-
-  - `app/views/decidim/shared/_extended_navigation_bar.html.erb`

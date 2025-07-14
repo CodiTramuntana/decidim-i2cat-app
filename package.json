@@ -5,29 +5,20 @@
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
     "@decidim/elections": "file:packages/elections",
-    "@decidim/webpacker": "file:packages/webpacker",
-    "@rails/webpacker": "^6.0.0-rc.6",
-    "graphql-ws": "^5.12.0",
-    "webpack": "^5.76.0",
-    "webpack-cli": "^4.8.0"
+    "@decidim/webpacker": "file:packages/webpacker"
   },
   "version": "0.1.0",
-  "engines": {
-    "node": "16.9.1"
-  },
-  "babel": {
-    "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset.js"
-    ]
-  },
   "browserslist": [
     "extends @decidim/browserslist-config"
   ],
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@decidim/dev": "file:packages/dev",
     "@decidim/eslint-config": "file:packages/eslint-config",
-    "@decidim/stylelint-config": "file:packages/stylelint-config",
-    "webpack-dev-server": "4.15.0"
+    "@decidim/prettier-config": "file:packages/prettier-config",
+    "@decidim/stylelint-config": "file:packages/stylelint-config"
+  },
+  "engines": {
+    "node": "18.17.1",
+    "npm": ">=9.6.7"
   }
 }

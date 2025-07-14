@@ -1,6 +1,6 @@
 default: &default
-  DECIDIM_APPLICATION_NAME: Decidim I2CAT APP
-#  DECIDIM_MAILER_SENDER: ??????
+  DECIDIM_APPLICATION_NAME: Decidim Clean APP
+  # DECIDIM_MAILER_SENDER: example@mail.com
   DECIDIM_AVAILABLE_LOCALES: "ca,en,es"
   DECIDIM_DEFAULT_LOCALE: "ca"
   DECIDIM_CORS_ENABLED: "true"
@@ -12,12 +12,11 @@ default: &default
 
   # Database configuration
   DB_PORT: "5432"
-  DB_POOL: "<%= ENV.fetch("RAILS_MAX_THREADS") { "5" } %>"
+  DB_POOL: "<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>"
   DB_HOST: <%= ENV.fetch("DATABASE_HOST") { "localhost" } %>
-  DB_DATABASE: "i2cat_app_dev"
-  DB_TEST_DATABASE: "i2cat_app_test"
+  DB_DATABASE: "clean_app_dev"
   DB_USERNAME: "db_username"
-  DB_PASSWORD: "db_username_password"
+  DB_PASSWORD: "db_password"
   # Mailer configuration
   MAILER_SMTP_ADDRESS: "smtp email address"
   MAILER_SMTP_DOMAIN: "smtp email domain"
@@ -33,6 +32,7 @@ development:
 
 test:
   <<: *default
+  DB_TEST_DATABASE: "clean_app_test"
 
 integration:
   <<: *default

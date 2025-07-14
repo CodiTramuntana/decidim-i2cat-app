@@ -35,7 +35,7 @@ module DecidimI2catApp
       ::Decidim::Admin::ApplicationController.helper ::Decidim::LayoutHelper
       ::Decidim::ApplicationController.helper ::Decidim::LayoutHelper
 
-      Dir.glob(Rails.root.join("app/decorators/**/*_decorator*.rb")).each do |c|
+      Rails.root.glob("app/decorators/**/*_decorator*.rb").each do |c|
         require_dependency(c)
       end
     end
